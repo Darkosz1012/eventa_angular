@@ -1,4 +1,4 @@
-# EventaAngular
+# Eventa 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Frontend
+
+
+![image](https://user-images.githubusercontent.com/26382728/173688398-517345bd-f8e4-4e75-8a11-d8f3d8cc4ded.png)
+
+![image](https://user-images.githubusercontent.com/26382728/173688463-3589bb43-c9ff-49ea-be07-7d2aa65b5ba8.png)
+
+![image](https://user-images.githubusercontent.com/26382728/173688544-67f90af4-1a47-4c59-bf0c-2da51067b373.png)
+
