@@ -1,0 +1,24 @@
+:host{
+    // position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.mat-drawer-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.mat-drawer{
+    // transition-duration: .4s;
+    transform: none !important;
+    visibility: visible !important;
+    display: block !important;
+    width: 60px;
+    transition: width .5s ease-in-out;
+}
+.mat-drawer-opened {
+    width: 220px;
+    transition: width .5s ease-in-out;
+}

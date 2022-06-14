@@ -11,14 +11,14 @@ import { AuthenticationService } from './_services';
 export class AppComponent {
   title = 'eventa_angular';
 
-  currentUser: User | null = null;
+  // currentUser: User | null = null;
 
-    constructor(
-        private router: Router,
-        private authenticationService: AuthenticationService
-    ) {
-        // this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-    }
+  //   constructor(
+  //       private router: Router,
+  //       private authenticationService: AuthenticationService
+  //   ) {
+  //       // this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+  //   }
 
     // logout() {
     //     this.authenticationService.logout();
