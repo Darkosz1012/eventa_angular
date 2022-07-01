@@ -12,8 +12,12 @@ import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 import { AvatarModule } from 'ngx-avatars';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.component';
+import { HomeSidenavComponent } from './components/home-sidenav/home-sidenav.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { EventMapComponent } from './components/event-map/event-map.component';
+import { EventListComponent } from './components/event-list/event-list.component';
+import { EventFiltersComponent } from './components/event-filters/event-filters.component';
+import { EventInfoComponent } from './components/event-info/event-info.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 		HomeComponent,
 		LoginComponent,
 		SignupComponent,
-  HomeSidebarComponent
+  HomeSidenavComponent,
+  EventMapComponent,
+  EventListComponent,
+  EventFiltersComponent,
+  EventInfoComponent
 	],
 	imports: [
 		BrowserModule,

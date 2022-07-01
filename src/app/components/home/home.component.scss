@@ -1,8 +1,14 @@
 :host {
   display: block;
+  height: 100vh;
 }
 
-.map{
-  height: 100vh !important;
-  width: 100% !important;
+.main__contatainer{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }

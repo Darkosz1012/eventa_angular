@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
     --color-primary : #673ab7;
+    --color-accent: #ffd740;
+    --color-text-light: #fff;
+    --color-warn: #f44336;
 }
 body{
     margin: 0;
@@ -9,10 +12,24 @@ body{
 
 .mat-drawer ~ .mat-drawer-content{
     margin-left: 60px !important;
-    transition: margin-left  .5s  ease-in-out;
+    transition: margin-left  .5s  ease-in-out !important;
 }
 
 .mat-drawer-opened ~ .mat-drawer-content{
     margin-left: 220px !important;
-    transition: margin-left  .5s  ease-in-out;
+    transition: margin-left  .5s  ease-in-out !important;
+}
+
+app-event-filters .mat-form-field-flex{
+    padding: 0 8px !important;
+    overflow-x:auto;
+
+}
+
+app-event-filters .mat-form-field-wrapper{
+    margin-bottom: -10px !important;
+}
+
+.mat-drawer-inner-container{
+    overflow-x: hidden !important;
 }

@@ -1,9 +1,22 @@
-<app-home-sidebar>
-    <div style="width: 2000px; height: 1500px;"  class="map"
-        leaflet 
-        [leafletOptions]="options"
-        (leafletMapReady)="onMapReady($event)">
-    </div>
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
 
-</app-home-sidebar>
+<app-home-sidenav>
+    <app-event-filters></app-event-filters>
+    <div class="main__contatainer">
+        <app-event-list></app-event-list>
+        <app-event-map></app-event-map>
+    </div>
+</app-home-sidenav>
 

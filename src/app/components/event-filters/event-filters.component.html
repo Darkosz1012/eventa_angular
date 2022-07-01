@@ -1,0 +1,47 @@
+<mat-form-field class="search" appearance="fill">
+    <!-- <mat-label>Favorite Fruits</mat-label> -->
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip
+        *ngFor="let fruit of fruits"
+        (removed)="remove(fruit)">
+        {{fruit}}
+        <button matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip>
+      <input
+        placeholder="Search"
+        #fruitInput
+        [formControl]="fruitCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+        {{fruit}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+<mat-chip-list class="type-filter" aria-label="Dog selection">
+    <mat-chip color="warn" selected>
+        <mat-chip-avatar>
+            <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+        </mat-chip-avatar>
+        Sport
+    </mat-chip>
+    <mat-chip color="primary" selected>
+        <mat-chip-avatar>
+            <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+        </mat-chip-avatar>
+        Music
+    </mat-chip>
+    <mat-chip color="accent" selected>
+        <mat-chip-avatar>
+            <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+        </mat-chip-avatar>
+        Exhibition
+    </mat-chip>
+</mat-chip-list>

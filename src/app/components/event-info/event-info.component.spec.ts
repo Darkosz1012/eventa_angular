@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeSidebarComponent } from './home-sidebar.component';
+import { EventInfoComponent } from './event-info.component';
 
-describe('HomeSidebarComponent', () => {
-  let component: HomeSidebarComponent;
-  let fixture: ComponentFixture<HomeSidebarComponent>;
+describe('EventInfoComponent', () => {
+  let component: EventInfoComponent;
+  let fixture: ComponentFixture<EventInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeSidebarComponent ]
+      declarations: [ EventInfoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomeSidebarComponent);
+    fixture = TestBed.createComponent(EventInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
