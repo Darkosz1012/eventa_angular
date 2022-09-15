@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    height: 100vh;
+  }
+  
+
+
+.example-spacer {
+flex: 1 1 auto;
+}
+
+img{
+  height: 80%;
+  object-fit: scale-down;
+  width: 77px;
+  margin: 0 !important;
+}

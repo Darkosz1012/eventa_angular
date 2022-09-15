@@ -1,0 +1,20 @@
+<mat-card class="event-card">
+    <img [src]="this.event.img ?? '/assets/img/logotran.png'" width="200" class="event-card__img"/>
+
+    <div class="event-card__info">
+        <div class="event-card__name">{{this.event.name}}</div>
+        <div class="event-card__date">{{formatDate(this.event.start_date)}} - {{formatDate(this.event.end_date)}}</div>
+        <div class="event-card__city">{{this.event.city}}, {{this.event.address}}</div>
+        <mat-chip class="event-card__type" >{{this.event.type}}</mat-chip>
+        <div class="event-card__participants">Number of participants {{this.event.participantsCount}}/{{this.event.max}}</div>
+        <!-- <div class="event-card__type">{{event.type}}</div> -->
+        <button *ngIf="this.event.joined == false && this.event.participantsCount!= undefined && this.event.max!= undefined && this.event.participantsCount < this.event.max" mat-raised-button color="primary" (click)="clickJoin()">Join</button>
+        <button *ngIf="this.event.joined == false && this.event.participantsCount!= undefined && this.event.max!= undefined && this.event.participantsCount >= this.event.max" mat-raised-button color="primary" disabled>Join</button>
+        <button *ngIf="this.event.joined == true" mat-raised-button color="warn" (click)="clickResign()">Resign</button>
+    </div>
+    <div class="event-card__desc">
+        {{this.event?.description}}
+
+        <!-- {{ test(this.event)}} -->
+    </div>
+</mat-card>

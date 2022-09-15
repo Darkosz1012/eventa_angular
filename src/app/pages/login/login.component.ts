@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthenticationService } from '@app/_services';
-import { first } from 'rxjs';
-
+import { AuthenticationService } from '@app/services';
+import { first } from 'rxjs/operators';
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loading = false;
   submitted = false;
@@ -26,9 +25,9 @@ export class SignupComponent implements OnInit {
       private authenticationService: AuthenticationService
   ) { 
       // redirect to home if already logged in
-    //   if (this.authenticationService.currentUserValue) { 
-    //       this.router.navigate(['/']);
-    //   }
+      if (this.authenticationService.currentUserValue) { 
+          // this.router.navigate(['/']);
+      }
 
       
   }
@@ -36,9 +35,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
         username: ['', Validators.required],
-        email: ['', Validators.required],
-        password: ['', Validators.required],
-        repeat_password: ['', Validators.required],
+        password: ['', Validators.required]
     });
 
     // get return url from route parameters or default to '/'
@@ -61,9 +58,11 @@ export class SignupComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
+                console.log("reload")
                   this.router.navigate([this.returnUrl]);
               },
               error => {
+                console.log("error")
                   this.error = error;
                   this.loading = false;
               });

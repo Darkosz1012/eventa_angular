@@ -1,0 +1,23 @@
+<button *ngIf="!this.newEvent" (click)="this.newEvent = true" mat-raised-button color="primary">Add Event</button>
+<!-- <mat-card *ngFor="let event of events" class="event-card">
+    <img [src]="event.img" width="200" class="event-card__img"/>
+
+    <div class="event-card__info">
+        <div class="event-card__name">{{event.name}}</div>
+        <div class="event-card__date">{{event.start_date}} - {{event.end_date}}</div>
+        <div class="event-card__date"></div>
+        <div class="event-card__city">{{event.city}}</div>
+        <mat-chip class="event-card__type" >{{event.type}}</mat-chip>
+        <div class="event-card__type">{{event.type}}</div>
+    </div>
+    
+</mat-card> -->
+<app-manage-event-card *ngIf="this.newEvent" (cancel)="this.newEvent = false"></app-manage-event-card>
+
+<hr>
+
+<app-manage-event-card *ngFor="let eve of events" [event]="eve">
+
+</app-manage-event-card>
+
+<mat-spinner *ngIf="events == null"></mat-spinner>
